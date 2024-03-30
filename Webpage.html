@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Static Webpage</title>
+</head>
+<body>
+	<style>
+		body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+	  }
+	  
+	  header {
+		background-color: #333;
+		color: #fff;
+		padding: 10px 0;
+		text-align: center;
+	  }
+	  
+	  nav {
+		background-color: black;
+		padding: 10px;
+	  }
+	  
+	  nav a {
+		text-decoration: none;
+		color: white;
+		padding: 5px 10px;
+		margin: 0 5px;
+	  }
+	  
+	  nav a:hover{
+		background-color: #323333;
+	  }
+	  
+	  img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 900px;
+		height: 190px;
+	  }
+	  #query{
+		text-align: center;
+	  }
+	  
+	  #query p{
+		font-family: verdana;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 20px;
+		border: 1px solid #303333;
+		padding: 10px;
+		width: 300px;
+		height: 20px;
+		background-color: #b0b2b5;
+	  }
+	  
+	  #input1{
+		border-radius: 12px;
+		border: 1px solid black;
+		padding: 10px; 
+		width: 200px;
+		height: 15px;
+	  }
+	  
+	  #button{
+		border-radius: 12px;
+		padding: 10px;
+		font-weight: bold;
+	  }
+	  
+	  #button:hover{
+		background-color: #b5b8b4;
+		cursor: pointer;
+	  }
+	  
+	  section {
+		padding: 20px;
+	  }
+	  
+	  footer {
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		padding: 19px 0;
+		position: flexible;
+		bottom: 0;
+		width: 100%;
+	  }
+	</style>
+
+	<header>
+		<h1>Static Webpage</h1>
+	</header>
+
+	<div id="navigation">
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Contact</a>
+		</nav>
+	</div>
+
+	<section>
+		<div>
+			<h2>Welcome to my Static Webpage</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper urna eget tortor accumsan, vel vulputate mauris placerat. Nam in ex id ipsum interdum aliquam in vel nulla. Suspendisse sit amet turpis vestibulum, sagittis purus sit amet, efficitur sem. Cras id dolor at nibh pellentesque volutpat non id ipsum. Fusce dui libero, tristique nec eleifend id, egestas non lacus. Suspendisse in sem sit amet velit bibendum venenatis. Donec dolor nulla, fermentum nec laoreet ac, pulvinar vitae odio. Sed sed neque at est suscipit posuere bibendum a tortor. Mauris faucibus purus molestie ligula consectetur faucibus. Sed dapibus viverra tortor a vestibulum. Ut eu ex a purus malesuada fringilla eget sed dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada. </p>
+		</div>
+		
+		<div id="image">
+			<img src="https://images.pexels.com/photos/51387/mount-everest-himalayas-nuptse-lhotse-51387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+		</div>
+		
+		<div id="query">
+			<p><u><strong>Have queries!! Send us...</strong></u></p>
+			<form name="contact" method="post">
+				<input type="text" id="input1" name="query" />
+				<input type="submit" name="button" id="button" value="Submit" />
+			</form>
+		</div>
+	</section>
+
+	<footer>
+		<div id="currentTime"></div>
+	</footer>
+	<script>
+		function updateTime() {
+		var now = new Date();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var seconds = now.getSeconds();
+    
+		minutes = (minutes < 10 ? '0' : '') + minutes;
+		seconds = (seconds < 10 ? '0' : '') + seconds;
+
+		var timeString = hours + ':' + minutes + ':' + seconds;
+
+		document.getElementById('currentTime').textContent = '© 2024 My Static Website | Time: '+timeString;
+	}
+	setInterval(updateTime, 1000);
+
+	updateTime();
+	</script>
+</body>
+</html>
